@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -34,10 +34,16 @@
     <canvas id="sort" width="520" height="320"></canvas>
     <div id="button">
         <button class="doSort" onclick="bubbleSort()">Bubble Sort!</button>
-        <button class="doSort" onclick="callQuickSort()">Quick Sort!</button>
+        <button class="doSort" onclick="quickSort()">Quick Sort!</button>
         <button class="doSort" onclick="selectionSort()">Selection Sort!</button>
         <button class="doSort" onclick="insertionSort()">Insertion Sort!</button>
     </div>
-    <script src="bubbleSort.js"></script>
+    <script src="sorting/utils.js"></script>
+    <script src="sorting/bubbleSort.js"></script>
+    <script src="sorting/insertionSort.js"></script>
+    <script src="sorting/selectionSort.js"></script>
+    <script src="sorting/mergeSort.js"></script>
+    <script src="sorting/quickSort.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
