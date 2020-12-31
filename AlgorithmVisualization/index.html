@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Sorting is Important</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden
+        }
+        canvas {
+            margin-top: 1%;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            background-color: #8a867d;
+        }
+        #button {
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color: #fcf6dc">
+    <h1 class="text-center">Sorting is Important</h1>
+    <br />
+    <br />
+    <canvas id="sort" width="520" height="320"></canvas>
+    <div id="button">
+        <button class="doSort" onclick="bubbleSort()">Bubble Sort!</button>
+        <button class="doSort" onclick="callQuickSort()">Quick Sort!</button>
+        <button class="doSort" onclick="selectionSort()">Selection Sort!</button>
+        <button class="doSort" onclick="insertionSort()">Insertion Sort!</button>
+    </div>
+    <script src="bubbleSort.js"></script>
+</body>
+</html>
