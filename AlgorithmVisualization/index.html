@@ -25,18 +25,51 @@
         #button {
             text-align: center;
         }
+        .float-container {
+            padding: 20px;
+            width: 100%
+        }
+
+        .float-child {
+            width: 50%;
+            float: left;
+            padding: 20px;
+        }
+        h3 {
+            text-align: center;
+        }
     </style>
 </head>
 <body style="background-color: #fcf6dc">
     <h1 class="text-center">Sorting is Important</h1>
     <br />
     <br />
-    <canvas id="sort" width="520" height="320"></canvas>
+    <div class="float-container">
+        <div class="float-child">
+            <h3>Bubble Sort</h3>
+            <canvas id="bubblesort" width="700" height="470"></canvas>
+        </div>
+        <div class="float-child">
+            <h3>Insertion Sort</h3>
+            <canvas id="insertionsort" width="700" height="470"></canvas>
+        </div>
+    </div>
+    <div class="float-container">
+        <div class="float-child">
+            <h3>Selection Sort</h3>
+            <canvas id="selectionsort" width="700" height="470"></canvas>
+        </div>
+        <div class="float-child">
+            <h3>Quick Sort</h3>
+            <canvas id="quicksort" width="700" height="470"></canvas>
+        </div>
+    </div>
     <div id="button">
         <button class="doSort" onclick="bubbleSort()">Bubble Sort!</button>
         <button class="doSort" onclick="quickSort()">Quick Sort!</button>
         <button class="doSort" onclick="selectionSort()">Selection Sort!</button>
         <button class="doSort" onclick="insertionSort()">Insertion Sort!</button>
+        <button class="doSort" onclick="sortAll()">Sort!</button>
     </div>
     <script src="sorting/utils.js"></script>
     <script src="sorting/bubbleSort.js"></script>

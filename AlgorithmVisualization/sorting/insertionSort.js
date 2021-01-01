@@ -1,16 +1,16 @@
 async function insertionSort() {
-    for (let i = 1; i < arrToSort.length; i++) {
-        let target = arrToSort[i];
+    for (let i = 1; i < iarr.length; i++) {
+        let target = iarr[i];
         let j = i - 1;
-        while ((j >= 0) && (target < arrToSort[j])) {
-            ctx = sort.getContext("2d");
-            ctx.clearRect(0, 0, 520, 320);
-            redraw([j + 1], i, 0);
-            await timer(10);
-            arrToSort[j + 1] = arrToSort[j];
+        while ((j >= 0) && (target < iarr[j])) {
+            ictx = isort.getContext("2d");
+            ictx.clearRect(0, 0, 700, 470);
+            redraw(ictx, [j + 1], i, 0, iarr);
+            await timer(5);
+            iarr[j + 1] = iarr[j];
             j--;
         }
-        arrToSort[j + 1] = target;
+        iarr[j + 1] = target;
     }
-    initDrawing();
+    initDrawing("i");
 }

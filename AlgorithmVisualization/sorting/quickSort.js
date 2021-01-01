@@ -1,7 +1,5 @@
 function callQuickSort() {
-    arrToSort = quickSort(arrToSort, 0);
-    //console.log(animation);
-    console.log(arrToSort);
+    qarr = quickSort(sarr, 0);
     //animateQuickSort();
 }
 
@@ -42,36 +40,36 @@ function quickSortRecursive(arr, x) {
 async function quickSort() {
     let stack = [];
     stack.push(0);
-    stack.push(arrToSort.length - 1);
+    stack.push(qarr.length - 1);
 
     while (stack[stack.length - 1] >= 0) {
         end = stack.pop();
         start = stack.pop();
-        pivotVal = arrToSort[end];
+        pivotVal = qarr[end];
         pivotIdx = start;
         for (let i = start; i < end; i++) {
-            if (arrToSort[i] < pivotVal) {
-                swap(i, pivotIdx);
+            if (qarr[i] < pivotVal) {
+                swap(i, pivotIdx, qarr);
                 pivotIdx++;
             }
         }
-        swap(pivotIdx, end)
+        swap(pivotIdx, end, qarr)
         if (pivotIdx - 1 > start) {
             stack.push(start);
             stack.push(pivotIdx - 1);
-            ctx = sort.getContext("2d")
-            ctx.clearRect(0, 0, 520, 320);
-            redraw([pivotIdx - 1], pivotIdx, 0);
-            await timer(100);
+            qctx = qsort.getContext("2d")
+            qctx.clearRect(0, 0, 700, 470);
+            redraw(qctx, [pivotIdx - 1], pivotIdx, 0, qarr);
+            await timer(5);
         }
         if (pivotIdx + 1 < end) {
             stack.push(pivotIdx + 1);
             stack.push(end);
-            ctx = sort.getContext("2d")
-            ctx.clearRect(0, 0, 520, 320);
-            redraw([pivotIdx + 1], pivotIdx, 0);
-            await timer(100);
+            qctx = qsort.getContext("2d")
+            qctx.clearRect(0, 0, 700, 470);
+            redraw(qctx, [pivotIdx + 1], pivotIdx, 0, qarr);
+            await timer(5);
         }
     }
-    initDrawing();
+    initDrawing('q');
 }
