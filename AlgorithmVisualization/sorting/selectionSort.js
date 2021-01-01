@@ -5,7 +5,7 @@ async function selectionSort() {
             sctx = ssort.getContext("2d")
             sctx.clearRect(0, 0, 700, 470);
             redraw(sctx, [j], mini, 0, sarr);
-            await timer(5);
+            await timer(1);
             if (sarr[j] < sarr[mini]) {
                 mini = j;
             }

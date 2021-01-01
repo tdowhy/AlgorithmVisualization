@@ -35,6 +35,20 @@ async function initDrawing(c) {
             drawBar(bctx, barr[i], i)
         }
     }
+    else if (c === "m") {
+        mctx = msort.getContext("2d");
+        mctx.clearRect(0, 0, 700, 470);
+        for (let i = 0; i < marr.length; i++) {
+            drawBar(mctx, marr[i], i)
+        }
+    }
+    else if (c === "c") {
+        cctx = csort.getContext("2d");
+        cctx.clearRect(0, 0, 700, 470);
+        for (let i = 0; i < carr.length; i++) {
+            drawBar(cctx, carr[i], i)
+        }
+    }
 }
 
 function redraw(ctx, x, t = -1, p=0, a) {

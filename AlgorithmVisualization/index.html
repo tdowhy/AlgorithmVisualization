@@ -11,7 +11,7 @@
         html, body {
             margin: 0;
             height: 100%;
-            overflow: hidden
+            #overflow: hidden
         }
         canvas {
             margin-top: 1%;
@@ -40,7 +40,7 @@
         }
     </style>
 </head>
-<body style="background-color: #fcf6dc">
+<body style="background-color: #ff9c86">
     <h1 class="text-center">Sorting is Important</h1>
     <br />
     <br />
@@ -48,27 +48,52 @@
         <div class="float-child">
             <h3>Bubble Sort</h3>
             <canvas id="bubblesort" width="700" height="470"></canvas>
+            <div id="button">
+                <button class="doSort" onclick="bubbleSort()">Bubble Sort!</button>
+            </div>
         </div>
         <div class="float-child">
             <h3>Insertion Sort</h3>
             <canvas id="insertionsort" width="700" height="470"></canvas>
+            <div id="button">
+                <button class="doSort" onclick="insertionSort()">Insertion Sort!</button>
+            </div>
         </div>
     </div>
     <div class="float-container">
         <div class="float-child">
             <h3>Selection Sort</h3>
             <canvas id="selectionsort" width="700" height="470"></canvas>
+            <div id="button">
+                <button class="doSort" onclick="selectionSort()">Selection Sort!</button>
+            </div>
+        </div>
+        <div class="float-child">
+            <h3>Cocktail Shaker Sort</h3>
+            <canvas id="cocktailshakersort" width="700" height="470"></canvas>
+            <div id="button">
+                <button class="doSort" onclick="cocktailShakerSort()">Cocktail Shaker Sort!</button>
+            </div>
+        </div>
+    </div>
+    <div class="float-container">
+        <div class="float-child">
+            <h3>Merge Sort</h3>
+            <canvas id="mergesort" width="700" height="470"></canvas>
+            <div id="button">
+                <button class="doSort" onclick="mergeSort()">Merge Sort!</button>
+            </div>
         </div>
         <div class="float-child">
             <h3>Quick Sort</h3>
             <canvas id="quicksort" width="700" height="470"></canvas>
+            <div id="button">
+                <button class="doSort" onclick="quickSort()">Quick Sort!</button>
+            </div>
         </div>
     </div>
+    
     <div id="button">
-        <button class="doSort" onclick="bubbleSort()">Bubble Sort!</button>
-        <button class="doSort" onclick="quickSort()">Quick Sort!</button>
-        <button class="doSort" onclick="selectionSort()">Selection Sort!</button>
-        <button class="doSort" onclick="insertionSort()">Insertion Sort!</button>
         <button class="doSort" onclick="sortAll()">Sort!</button>
     </div>
     <script src="sorting/utils.js"></script>
@@ -77,6 +102,8 @@
     <script src="sorting/selectionSort.js"></script>
     <script src="sorting/mergeSort.js"></script>
     <script src="sorting/quickSort.js"></script>
+    <script src="sorting/mergeSort.js"></script>
+    <script src="sorting/cocktailShakerSort.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
